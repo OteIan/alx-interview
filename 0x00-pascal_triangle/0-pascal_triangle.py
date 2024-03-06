@@ -13,8 +13,8 @@ def pascal_triangle(n):
     result = []
 
     if n <= 0:
-        return result 
-    
+        return result
+
     for i in range(n):
         row = []
         for j in range(i+1):
