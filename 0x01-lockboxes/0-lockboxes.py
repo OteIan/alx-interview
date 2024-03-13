@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """
-
+Lockboxes module
 """
 from collections import deque
 
 
 def canUnlockAll(boxes):
-    """ """
+    """
+    Lockboxes method
+    """
     num = len(boxes)
     keys = set()
     opened = set()
