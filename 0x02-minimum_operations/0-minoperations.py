@@ -1,7 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Minimum operations module
 """
+
 
 def minOperations(n):
     """
