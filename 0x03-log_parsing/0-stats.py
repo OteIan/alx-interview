@@ -14,7 +14,7 @@ try:
         output = line.strip().split(" ")
 
         # Obtain the status code and file size
-        status_code = output[-2]
+        status_code = int(output[-2])
         file_size = int(output[-1])
 
         # Increment the status code count by 1
