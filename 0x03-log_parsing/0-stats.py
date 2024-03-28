@@ -13,9 +13,9 @@ def print_metrics(status_code_count, total_file_size):
     Prints the metrics
     """
     print(f"File size: {total_file_size}")
-    for code in sorted(status_code_count.keys()):
-        if status_code_count[code] > 0:
-            print(f"{code}: {status_code_count[code]}")
+    for code, number in sorted(status_code_count.items()):
+        if number > 0:
+            print(f"{code}: {number}")
 
 try:
     for line in sys.stdin:
@@ -37,8 +37,6 @@ try:
                 line_count = 0
             
 
-except KeyboardInterrupt:
+finally:
     # Print the metrics if Ctrl+C is called
     print_metrics(status_code_count, total_file_size)
-
-    sys.exit(0)
