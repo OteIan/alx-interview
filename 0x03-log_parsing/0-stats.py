@@ -30,12 +30,14 @@ try:
     for line in sys.stdin:
         output = line.split()
 
+        # Checks if stdin is in the correct format
         if len(output) > 2:
-            line_count += 1
+            line_count += 1  # Updates line count
 
             status_code = output[-2]
-            total_file_size += int(output[-1])
+            total_file_size += int(output[-1])  # Updates total file size
 
+            # Updates the status code dictionary
             if status_code in status_code_count.keys():
                 status_code_count[status_code] += 1
 
