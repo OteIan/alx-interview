@@ -8,6 +8,7 @@ total_file_size = 0
 status_code_count = {"200": 0, "301": 0, "400": 0, "401": 0,
                      "403": 0, "404": 0, "405": 0, "500": 0}
 
+
 def print_metrics(status_code_count, total_file_size):
     """
     Prints the metrics
@@ -16,6 +17,7 @@ def print_metrics(status_code_count, total_file_size):
     for code, number in sorted(status_code_count.items()):
         if number > 0:
             print(f"{code}: {number}")
+
 
 try:
     for line in sys.stdin:
@@ -31,11 +33,9 @@ try:
                 if status_code in status_code_count.keys():
                     status_code_count[status_code] += 1
 
-
             if line_count == 10:
                 print_metrics(status_code_count, total_file_size)
                 line_count = 0
-            
 
 finally:
     # Print the metrics if Ctrl+C is called
