@@ -13,6 +13,9 @@ try:
         # Strip the output into parts
         output = line.strip().split(" ")
 
+        if len(line) != 7:
+            continue
+
         # Obtain the status code and file size
         status_code = int(output[-2])
         file_size = int(output[-1])
