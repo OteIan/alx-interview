@@ -13,7 +13,7 @@ try:
         output = line.strip().split(" ")
 
         # Obtain the status code and file size
-        status_code = int(output[-2])
+        status_code = output[-2]
         file_size = int(output[-1])
 
         # Increment the line count and total file size
@@ -21,7 +21,7 @@ try:
         total_file_size += file_size
 
         # Increment the status code count by 1
-        if status_code in status_code_count:
+        if status_code in status_code_count and isinstance(status_code, int):
             status_code_count[status_code] += 1
 
         # Print the metrics after 10 lines of data has been processed
