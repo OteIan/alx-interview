@@ -6,3 +6,4 @@
 4. [Log Parsing](./0x03-log_parsing/)
 5. [UTF-8 Validation](./0x04-utf8_validation/)
 7. [Star wars API](./0x06-starwars_api/)
+8. [Rotate 2D Matix](./0x07-rotate_2d_matrix/)
