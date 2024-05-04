@@ -8,7 +8,7 @@ def makeChange(coins, total):
     """
     Make change function
     """
-    if total <= 0 or min(coins) > total:
+    if total <= 0 or min(coins) > total or coins == []:
         return 0
     coins.sort(reverse=True)
     change = 0
